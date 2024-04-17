@@ -65,7 +65,7 @@
                 <a href="signup.php" class="nav-item nav-link">sign Up</a>
                 <a href="login.php" class="nav-item nav-link">Login</a>
             </div>
-            <a href="" class="btn py-4 px-lg-5 d-none d-lg-block">Learn With AI&rarr;<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="http://192.168.130.110:8502" class="btn py-4 px-lg-5 d-none d-lg-block">Learn With AI&rarr;<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -96,7 +96,7 @@
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Learning Materials</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
+                                <h1 class="display-3 text-white animated slideInDown">Learn With Our AI Power Tools</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Learn with AI&rarr;</a>
                             </div>
