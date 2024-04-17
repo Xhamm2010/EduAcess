@@ -23,7 +23,7 @@ include('connect.php');
     <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css" />
 
     <!-- custom css file link up -->
-    <link rel="stylesheet" type="text/css" href="style2.css" />
+    <link rel="stylesheet" type="text/css" href="css/style2.css" />
 
     <style>
     .headr {

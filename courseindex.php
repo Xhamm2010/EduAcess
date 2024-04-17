@@ -1,3 +1,16 @@
+<?php
+session_start();
+include('connect.php');
+
+$_SESSION['userID'] = NULL;
+$_SESSION['password'] = NULL;
+$_SESSION['teacherID'] = NULL;
+$_SESSION['teacherpass'] = NULL;
+$_SESSION['adminID'] = NULL;
+$_SESSION['adminpass'] = NULL;
+$_SESSION['tname'] = NULL;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +57,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>EduAccess</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -62,9 +75,9 @@
                         <a href="404.php" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="contact.php" class="nav-item nav-link">Contact</a>
+                <!-- <a href="contact.php" class="nav-item nav-link">Contact</a> -->
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="" class="btn py-4 px-lg-5 d-none d-lg-block">Learn With AI&rarr;<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -89,6 +102,35 @@
     </div>
     <!-- Header End -->
 
+    <?php
+
+$sql = "select * FROM engineering WHERE 1";
+    
+$result = mysqli_query($conn , $sql);
+$count = mysqli_num_rows($result);
+$engindata = mysqli_fetch_assoc($result);
+$engine = $count;
+
+
+$sql2 = "select * FROM business WHERE 1";
+    
+$result2 = mysqli_query($conn , $sql2);
+$count2 = mysqli_num_rows($result2);
+
+$buss = $count2;
+
+
+
+$sql3 = "select * FROM medical WHERE 1";
+    
+$result3 = mysqli_query($conn , $sql3);
+$count3 = mysqli_num_rows($result3);
+
+$medicure = $count3;
+
+
+?>
+
 
     <!-- Categories Start -->
     <div class="container-xxl py-5 category">
@@ -104,8 +146,8 @@
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/cat-1.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Web Design</h5>
-                                    <small class="text-primary">49 Courses</small>
+                                    <h5 class="m-0"><?php echo $engindata['category'] ?></h5>
+                                    <small class="text-primary"><?php echo $engine ?></small>
                                 </div>
                             </a>
                         </div>
@@ -302,9 +344,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>RoarHub UNN</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>xhamm2010@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -349,11 +391,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                        &copy; <a class="border-bottom" href="#">EduAccess</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
