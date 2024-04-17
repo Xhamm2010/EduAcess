@@ -43,7 +43,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>EduAccess</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -54,12 +54,12 @@
                 <a href="index.php" class="nav-item nav-link active">Home</a>
                 <a href="about.php" class="nav-item nav-link">About</a>
                 <a href="courseindex.php" class="nav-item nav-link">Courses</a>
+                <a href="EduAcess_chat_bot/index.php" class="nav-item nav-link">EduAccess ChatBot</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
                         <a href="team.php" class="dropdown-item">Our Team</a>
                         <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                        <a href="404.php" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
                 <a href="signup.php" class="nav-item nav-link">sign Up</a>
@@ -252,7 +252,7 @@
 
 
     <!-- Courses Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
@@ -345,7 +345,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Courses End -->
 
 

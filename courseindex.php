@@ -56,7 +56,7 @@ $_SESSION['tname'] = NULL;
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>EduAccess</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -72,7 +72,7 @@ $_SESSION['tname'] = NULL;
                     <div class="dropdown-menu fade-down m-0">
                         <a href="team.php" class="dropdown-item">Our Team</a>
                         <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                        <a href="404.php" class="dropdown-item">404 Page</a>
+                        <a href="EduAcess_chat_bot/index.php" class="dropdown-item">EduAcess_chat_bot</a>
                     </div>
                 </div>
                 <!-- <a href="contact.php" class="nav-item nav-link">Contact</a> -->
@@ -109,24 +109,29 @@ $sql = "select * FROM engineering WHERE 1";
 $result = mysqli_query($conn , $sql);
 $count = mysqli_num_rows($result);
 $engindata = mysqli_fetch_assoc($result);
-$engine = $count;
+$engineCount = $count;
 
 
 $sql2 = "select * FROM business WHERE 1";
     
 $result2 = mysqli_query($conn , $sql2);
 $count2 = mysqli_num_rows($result2);
+$businessdata = mysqli_fetch_assoc($result2);
+$businessCount = $count2;
 
-$buss = $count2;
 
 
-
-$sql3 = "select * FROM medical WHERE 1";
-    
+$sql3 = "select * FROM general WHERE 1";   
 $result3 = mysqli_query($conn , $sql3);
+$generaldata = mysqli_fetch_assoc($result3);
 $count3 = mysqli_num_rows($result3);
+$generalCount = $count3;
 
-$medicure = $count3;
+$sql4 = "select * FROM medical WHERE 1";   
+$result4 = mysqli_query($conn , $sql4);
+$medicaldata = mysqli_fetch_assoc($result4);
+$count4 = mysqli_num_rows($result4);
+$medicalCount = $count4;
 
 
 ?>
@@ -147,7 +152,7 @@ $medicure = $count3;
                                 <img class="img-fluid" src="img/cat-1.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                     <h5 class="m-0"><?php echo $engindata['category'] ?></h5>
-                                    <small class="text-primary"><?php echo $engine ?></small>
+                                    <small class="text-primary"><?php echo $engineCount ?></small>
                                 </div>
                             </a>
                         </div>
@@ -155,8 +160,8 @@ $medicure = $count3;
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/cat-2.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Graphic Design</h5>
-                                    <small class="text-primary">49 Courses</small>
+                                    <h5 class="m-0"><?php echo $businessdata['category'] ?></h5>
+                                    <small class="text-primary"><?php echo $businessCount ?></small>
                                 </div>
                             </a>
                         </div>
@@ -164,8 +169,8 @@ $medicure = $count3;
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/cat-3.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Video Editing</h5>
-                                    <small class="text-primary">49 Courses</small>
+                                    <h5 class="m-0"><?php echo $generaldata['category'] ?></h5>
+                                    <small class="text-primary"><?php echo $generalCount ?></small>
                                 </div>
                             </a>
                         </div>
@@ -175,8 +180,8 @@ $medicure = $count3;
                     <a class="position-relative d-block h-100 overflow-hidden" href="">
                         <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover;">
                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                            <h5 class="m-0">Online Marketing</h5>
-                            <small class="text-primary">49 Courses</small>
+                            <h5 class="m-0"><?php echo $medicaldata['category'] ?></h5>
+                            <small class="text-primary"><?php echo $medicalCount ?></small>
                         </div>
                     </a>
                 </div>
@@ -187,7 +192,7 @@ $medicure = $count3;
 
 
     <!-- Courses Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
@@ -280,7 +285,7 @@ $medicure = $count3;
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Courses End -->
 
 
